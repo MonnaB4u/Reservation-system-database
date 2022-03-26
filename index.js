@@ -43,7 +43,8 @@ async function run() {
         app.get('/CruisesCollection', async (req, res) => {
             const cruises = CruisesCollection.find({});
             const user = await cruises.toArray();
-            res.send(user);
+            const result= user.reverse()
+            res.send(result);
         })
 
 
