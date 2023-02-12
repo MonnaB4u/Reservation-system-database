@@ -166,7 +166,7 @@ async function run() {
             const options = { upsert: true };
             const updateDoc = {
                 $set: {
-                    status: UpdateUser.status,
+                    status: UpdateUser.status
                 }
             };
             const result = await OrderCollection.updateOne(filter, updateDoc, options);
